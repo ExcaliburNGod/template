@@ -1,3 +1,1 @@
-## 董一诺的代码库
-
-- 字符串
+## Template-Code-for-Competitive-Programming
