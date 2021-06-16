@@ -1,0 +1,58 @@
+struct SegTree{
+    static int maxn = ;
+    
+    struct Node{
+        int l, r;
+    };
+    
+    #define L no[ind].l
+    #define R no[ind].R
+
+    Node no[maxn * 4];
+
+    void push_up(int ind){
+
+    }
+
+    void push_down(int ind){
+
+    }
+
+    void build(int l, int r, int ind){
+        L = l, R = r;
+        if (l == r){
+
+        } else{
+            int mid = l + r >> 1;
+            build(l, mid, lson);
+            build(mid + 1, r, rson);
+            push_up(ind);
+        }
+    }
+
+    void update(int l, int r, int ind, int val){
+        if (l > R || r < L){
+            return;
+        } else if (l <= L && R <= r){
+
+        } else{
+            push_down(ind);
+            update(l, r, lson, val);
+            update(l, r, rson, val);
+            push_up(ind);
+        }
+    }
+
+    void query(int l, int r, int ind, int &ans){
+        if (l > R || r < L){
+            return;
+        } else if (l <= L && R <= r){
+
+        } else{
+            push_down(ind);
+            query(l, r, lson, ans);
+            query(l, r, rson, ans);
+            push_up(ind);
+        }
+    }
+};
