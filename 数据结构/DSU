@@ -1,0 +1,20 @@
+struct DSU{
+    
+    static const int maxn = 
+
+    int f[maxn];
+
+    void init(){
+        F(i, 1, maxn){
+            f[i] = i;
+        }
+    }
+
+    int find(int x){
+        return x ^ f[x] ? f[x] = find(f[x]) : x;
+    }
+    
+    void merge(int x, int y){
+        f[find(x)] = find(y);
+    }
+};
